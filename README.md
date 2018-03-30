@@ -1,6 +1,8 @@
 # MarkLogic Search Application
 
-	The purpose of this file is to describes how easy it is to build from scratch a basic web search application and start testing it's functionality
+	The purpose of this file is to describes how easy it is 
+	to build from scratch a basic web search application 
+	and start testing it's functionality
 
 
 ## 1. INTRODUCTION
@@ -30,8 +32,10 @@
 3.2. 	Install MarkLogic Server 9 Server.  Make sure that you know the location where the server was installed
 		
 3.3.	Start MarkLogic service and admin server using e.g. Windows start option
-	Verify that MarkLogic service is up by running the following command
+	Verify that MarkLogic service is up by running the following command:
+	```
 			sc query MarkLogic
+	```
 		
 	After completing this step make sure that:
 		- you have active account at 
