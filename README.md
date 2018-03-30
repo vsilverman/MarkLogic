@@ -7,7 +7,8 @@
 
 	This file outlines the steps required for:
 	- installation of MarkLogic server 9
-	- inserting xml based content into the MarkLogic database for further searching (using Shakespeare plays as the sample content).
+	- inserting xml based content into the MarkLogic database 
+	    (using Shakespeare plays as the sample content).
 	- build a basic web search application on top of MarkLogic server
 	- start testing this application
 
@@ -22,34 +23,26 @@
 ## 3. STEPS
 
 3.1.	Download MarkLogic Server 9 through the browser or using the CURL tool.
-		You may see download instructions at http://docs.marklogic.com/guide/installation.
-		CURL will be needed for further tests, so In case you don't have it install it from https://curl.haxx.se/ .
-		On Windows OS you may want to run curl from gitbash environment, make sure you have it installed as well.
+	You may see download instructions at http://docs.marklogic.com/guide/installation.
+	CURL will be needed for further tests, so In case you don't have it install it from https://curl.haxx.se/ .
+	On Windows OS you may want to run curl from gitbash environment, make sure you have it installed as well.
 
 3.2. 	Install MarkLogic Server 9 Server.  Make sure that you know the location where the server was installed
 		
 3.3.	Start MarkLogic service and admin server using e.g. Windows start option
 	Verify that MarkLogic service is up by running the following command
-		...
 			sc query MarkLogic
-		...
 		
 	After completing this step make sure that:
 		- you have active account at 
-		...
 			https://developer.marklogic.com
-		...
 		- you register for an account if you don't have one
 		- you downloaded and installed MarkLogic developer license.  Follow MarkLogic documentation to install the license.
 		- you can view installed license at
-		...
 			http://localhost:8001/license.xqy
-		...
  
 3.4.	Download zipped content of Shakespare plays from 
-		...
 			http://metalab.unc.edu/bosak/xml/eg/shaks200.zip
-		...
 
 3.5.	Create db for storing shakespeare content. To do this:
 		- cd to your MarkLogic 9 Server installation directory
@@ -72,29 +65,21 @@
 		
 3.9		List loaded Shaekespeare content in ascending and descending orders.  To do this:
 		- point your browser to the ascending titles script at 
-		...
 			http://localhost:<your-port>/titles-a.xqy
-		...
 		- open a new browser panel
 		- point a new panel to the decending titles script at 
-		...
 			http://localhost:<your-port>/titles-d.xqy
-		...
 		- compare the order of shakespare plays in both browser panels
 		
 3.10	Search for the word on "LINE" element in provided XML files, display the matching results grouped by document name and highlighting the searched word. For doing this:
 		- point your browser to your newly created http server at 
-		...
 			http://localhost:<your-port>/
-		...
 		- make sure that on the right frame you can see the ordered list of all shakespeare plays
 		- type in the search box on the left any word, e.g. Mark
 		- make sure that the right frame displays the search results and higlights the searched word
 		
 3.11	Start testing your applications by using MarkLogic Test Engine. You can find detailed instructions at the following url:
-		...
 		https://github.com/marklogic-community/widowmaker
-		...
 
 ### Some notes to remember:
 ---------------------------
