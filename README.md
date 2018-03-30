@@ -26,11 +26,6 @@
 
 3.1.	Download MarkLogic Server 9 through the browser or using the CURL tool.
 	You may see download instructions at http://docs.marklogic.com/guide/installation.
-<<<<<<< HEAD
-=======
-	CURL will be needed for further tests, so In case you don't have it install it from https://curl.haxx.se/ .
-	On Windows OS you may want to run curl from gitbash environment, make sure you have it installed as well.
->>>>>>> 663be067579dd79c3811957f04d7979445d7bd73
 
 3.2. 	Install MarkLogic Server 9 Server.  Make sure that you know the location where the server was installed
 		
@@ -97,8 +92,9 @@
 3.11	Start testing your applications by using MarkLogic Test Engine. You can find detailed instructions at the following url:
 		https://github.com/marklogic-community/widowmaker .
 
-### Some notes to remember:
 ---------------------------
+### Some notes to remember:
+
 	- Implementation of search is case-sensitive
 	- Only the whole word is highlighted. To highlight all occurences - press Ctrl + F and enter the word.
 	- Pressing search button without entering any text presents all plays, grouped by filenames and sliced by LINE
