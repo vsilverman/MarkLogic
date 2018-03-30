@@ -1,4 +1,4 @@
-xquery version "0.9-ml"
+﻿xquery version "0.9-ml"
 
 import module namespace s="http://marklogic.com/bill/search"
  at "search-lib.xqy"
@@ -26,14 +26,15 @@ xdmp:set-response-content-type("text/html; charset=utf-8"),
       for $play in xdmp:directory("/shakespeare/plays/")
       return 
       	<pre> 
-         <b>FILE: {fn:document-uri($play)}</b> {
+         <b>FILE: {fn:document-uri($play)}</b>
+          {
 			for $line in $play//LINE
 			where contains(data($line), xdmp:get-request-field("query"))   
 			return 
 				<li>
 					{cts:highlight($line, xdmp:get-request-field("query"), <span style="background-color: #FFFF00">{$cts:text}</span>)[1 to 50]}
 				</li>    
-      		}
+      	  }
       	</pre>	
     }
 
